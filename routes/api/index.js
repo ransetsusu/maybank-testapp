@@ -3,14 +3,17 @@
  *  @description: Index file for API application. all routes with 'api/<api_version/'
  */
 
-const APIROUTER = require('express').Router();
+const API_ROUTER = require('express').Router();
 
 // index route
-APIROUTER.get('/', (req, res) => {
+API_ROUTER.get('/', (req, res) => {
     res.send({'message': 'API index route'});
 })
 
-APIROUTER.use('/auth', require("./auth"));
-APIROUTER.use('/products', require("./product"));
+API_ROUTER.use('/auth', require("./auth"));
+API_ROUTER.use('/products', require("./product"));
+API_ROUTER.use('/categories', require("./category"));
+API_ROUTER.use('/merchants', require("./merchant"));
+API_ROUTER.use('/gender-tags', require("./gender_tag"));
 
-module.exports = APIROUTER
+module.exports = API_ROUTER

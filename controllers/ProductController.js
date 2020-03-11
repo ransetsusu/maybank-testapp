@@ -1,3 +1,4 @@
+const productService = require('../services/ProductService')
 
 class ProductController
 {
@@ -10,7 +11,9 @@ class ProductController
      * @returns Product object
      */
     get(req, res) {
-        res.send('SUCCESS AUTH')
+        productService.getProduct(req.body, (callback) => {
+            res.json(callback)
+        })
     }
 
 }

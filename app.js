@@ -1,12 +1,12 @@
 // load configurations
-const dotenv = require('dotenv')
+var dotenv = require('dotenv')
 dotenv.config()
-const express = require('express')
-const config = require('config')
-const cors = require('cors')
+var express = require('express')
+var config = require('config')
+var cors = require('cors')
 
-const app = express()
-const logger = require('morgan')
+var app = express()
+var logger = require('morgan')
 
 // define basedir global for later use
 global._basedir = __dirname
@@ -16,7 +16,7 @@ global._basedir = __dirname
  */
 app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }))
 
 app.use(logger('dev'))
 
@@ -24,7 +24,7 @@ app.use(logger('dev'))
 /**
  * @description Database config/bootstrap
  */
-require('./models/index');
+require('./models/index')
 
 
 app.get('/', (req, res) => {

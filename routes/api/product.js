@@ -1,6 +1,6 @@
 /**
  *  /routes/api/product.js
- *  @description: Index file for authentication page. all routes with '/api/v1/products'
+ *  @description: all routes with '/api/v1/products'
 */
 
 const JWTAuth = require('../../middlewares/verifyToken')

@@ -1,11 +1,9 @@
-const USER = require('../services/UserService')
+const userService = require('../services/UserService')
 
 
 class AuthController
 {
-    constructor() {
-        this.user = null
-    }
+    constructor() {}
 
     /**
      *
@@ -19,7 +17,7 @@ class AuthController
             password: req.body.password,
         }
 
-        USER.isValid(params, (callback) => {
+        userService.isValid(params, (callback) => {
             res.json(callback)
         })
     }

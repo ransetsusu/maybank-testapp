@@ -6,7 +6,7 @@
 const AUTHROUTER =  require("express").Router()
 const AUTH_CONTROLLER = require('../../controllers/AuthController')
 
-const auth = new AUTH_CONTROLLER
+var auth = new AUTH_CONTROLLER
 
 AUTHROUTER.route('/').post(auth.login)
 
