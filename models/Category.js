@@ -14,5 +14,9 @@ module.exports = (sequelize, DataTypes) => {
         underscored: true
     })
 
+    Category.associate = (models) => {
+        Category.belongsTo(models.sub_categories)
+    }
+
     return Category
 }

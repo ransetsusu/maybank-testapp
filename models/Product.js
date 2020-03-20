@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         title: DataTypes.STRING,
         url: DataTypes.STRING,
-        category_id: {
+        images: DataTypes.TEXT,
+        sub_category_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -31,6 +32,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamp: false,
         underscored: true
     })
+
+    Product.associate = (models) => {
+        Product.belongsTo(models.sub_categories)
+        Product.belongsTo(models.merchants)
+        Product.belongsTo(models.gender_tags)
+    }
 
     return Product
 }

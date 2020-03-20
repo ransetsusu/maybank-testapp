@@ -12,6 +12,9 @@ const product = new PRODUCT_CONTROLLER
 
 PRODUCTROUTER.use(JWTAuth)
 PRODUCTROUTER.route('/').get(product.get)
+PRODUCTROUTER.route('/').post(product.create)
+PRODUCTROUTER.route('/:product_id').put(product.update)
+PRODUCTROUTER.route('/:product_id').delete(product.delete)
 
 
 module.exports = PRODUCTROUTER
