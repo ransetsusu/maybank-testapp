@@ -1,2 +1,2 @@
-# maybank-testapp
+# node-testapp
 Assignment about product management
