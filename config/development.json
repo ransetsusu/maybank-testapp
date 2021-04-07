@@ -1,0 +1,14 @@
+{
+    "app": {
+        "port": 5000
+    },
+    "db": {
+        "host": "localhost",
+        "user": "root",
+        "port": 3360,
+        "password": "1234",
+        "database": "maybank-dev"
+    },
+    "API_VERSION": "v1",
+    "JWTSecret": ""
+}
